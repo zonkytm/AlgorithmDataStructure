@@ -1,7 +1,7 @@
 package test;
 
 
-import Main.Author;
+import Author.Author;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 import org.junit.jupiter.api.Assertions;

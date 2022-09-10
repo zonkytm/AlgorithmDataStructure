@@ -1,4 +1,4 @@
-package Main;
+package FirstHW;
 
 import java.util.Scanner;
 

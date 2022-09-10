@@ -1,4 +1,4 @@
-package Main;
+package Ball;
 
 import static java.lang.Math.abs;
 
@@ -9,7 +9,7 @@ public class Ball {
         x=0.0;
         y=0.0;
     }
-    public Ball( double x,double y){
+    public Ball(double x, double y){
         this.x=x;
         this.y=y;
     }

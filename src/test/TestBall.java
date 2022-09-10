@@ -1,6 +1,6 @@
 package test;
 
-import Main.Ball;
+import Ball.Ball;
 import junit.framework.TestCase;
 import org.junit.jupiter.api.*;
 
