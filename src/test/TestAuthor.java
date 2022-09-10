@@ -4,6 +4,7 @@ package test;
 import Main.Author;
 import junit.framework.Assert;
 import junit.framework.TestCase;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,18 +22,30 @@ public class TestAuthor extends TestCase {
 
     }
     @Test
-    public void TestName() throws Exception{
-        Assert.assertEquals("name",author.getName());
+    public void TestName() {
+        Assertions.assertEquals("name",author.getName());
     }
 
     @Test
-    public void TestEmail() throws Exception{
-        Assert.assertEquals("_@gmail.com",author.getEmail());
+    public void TestEmail(){
+        Assertions.assertEquals("_@gmail.com",author.getEmail());
     }
 
     @Test
-    public void TestGender() throws  Exception{
+    public void TestGender() {
         Assert.assertEquals('m',author.getGender());
+    }
+    @Test
+    public  void TestNameNotNull(){
+        Assertions.assertNotNull(author.getName());
+    }
+    @Test
+    public  void TestEmailNotNull(){
+        Assertions.assertNotNull(author.getEmail());
+    }
+    @Test
+    public  void TestGenderNotNull(){
+        Assertions.assertNotNull(author.getGender());
     }
 
 
