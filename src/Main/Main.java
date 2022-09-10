@@ -3,7 +3,8 @@ package Main;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        test.TestAuthor testAuthor=new test.TestAuthor();
+        Ball ball=new Ball();
+        ball.move(10.4,-10.303452);
 
 
 
