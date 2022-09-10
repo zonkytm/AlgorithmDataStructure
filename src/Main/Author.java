@@ -5,6 +5,9 @@ public class Author {
     private String email;
     private char gender;
 
+    public  Author(){
+
+    }
     public Author(String name,String email,char gender){
         this.name=name;
         this.email=email;
@@ -25,6 +28,13 @@ public class Author {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setGender(char gender) {
+        this.gender = gender;
     }
 
     @Override
