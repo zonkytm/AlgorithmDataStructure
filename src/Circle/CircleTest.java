@@ -1,4 +1,4 @@
-package CIrcle;
+package Circle;
 
 public class CircleTest {
 
@@ -7,5 +7,10 @@ public class CircleTest {
         Circle circle2=new Circle();
         circle2.setRadius(-10);
         System.out.println(circle1.equals(circle2));
+
+        circle1.setRadius(5);
+        System.out.println(circle1.equals(circle2));
+        System.out.println(circle1.getLength());
+        System.out.println(circle1.getS());
     }
 }

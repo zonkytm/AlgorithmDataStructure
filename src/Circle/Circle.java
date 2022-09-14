@@ -1,4 +1,4 @@
-package CIrcle;
+package Circle;
 
 import java.util.Objects;
 
