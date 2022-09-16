@@ -7,7 +7,7 @@ public class Main {
 
 
         int cardsPerPlayer = 5;
-        int players = 0;
+        int players;
 
         String[] suits = {
                 "Peak", "Tambourine", "Heart", "Clubs"
@@ -53,7 +53,6 @@ public class Main {
         }
 
 
-
         String[] deck = new String[n];
         for (int i = 0; i < rank.length; i++) {
             for (int j = 0; j < suits.length; j++) {
@@ -68,11 +67,14 @@ public class Main {
             deck[r] = deck[i];
             deck[i] = temp;
         }
+        System.out.println(deck.length);
 
-        for (int i = 0; i < players * cardsPerPlayer; i++) {
+        for (int i = 0; i < cardsPerPlayer*players; i++) {
+            if(i%cardsPerPlayer==0){
+                System.out.println(("Player " +((i / cardsPerPlayer) + 1)));
+            }
             System.out.println(deck[i]);
-            if (i % cardsPerPlayer == cardsPerPlayer - 1)
-                System.out.println();
+
         }
     }
-    }
+}
