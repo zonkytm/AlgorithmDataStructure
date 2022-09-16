@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Number1 {
     private int[] massive;
-    private  int sum;
+    private  double sum;
     private double average;
 
 
@@ -18,7 +18,7 @@ public class Number1 {
             sum+=massive[i];
 
         }
-        average=sum/length;
+        average=sum/(double) length;
         System.out.println("Sum= "+sum+"\n"+"Average= "+average);
 
     }
@@ -26,7 +26,7 @@ public class Number1 {
         massive=new int[length];
         Scanner in=new Scanner(System.in);
         sum=0;
-        int min=100000000,max=-10000000,i=0;
+        int min=Integer.MAX_VALUE,max=Integer.MIN_VALUE,i=0;
         while(i<length){
             massive[i]=in.nextInt();
             sum+=massive[i];

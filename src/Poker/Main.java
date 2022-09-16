@@ -5,26 +5,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // часть 1 - инициализация переменных
+
         int cardsPerPlayer = 5;
         int players = 0;
 
         String[] suits = {
-                "Пик", "Бубен", "Черв", "Треф"
+                "Peak", "Tambourine", "Heart", "Clubs"
         };
 
         String[] rank = {
                 "2", "3", "4", "5", "6", "7", "8", "9", "10",
-                "Валет", "Королева", "Король", "Туз"
+                "Jack", "Queen", "King", "Ace"
         };
 
-        int n = suits.length * rank.length; // количество карт
+        int n = suits.length * rank.length;
 
 
-        // часть 2 - ввод с консоли
         for (; ; ) {
             Scanner sc = new Scanner(System.in);
-            System.out.println("Введите количество игроков: ");
+            System.out.println("Enter number of players: ");
 
             if (sc.hasNextInt()) {
 
@@ -34,27 +33,27 @@ public class Main {
                 } else {
                     if (players == 0) {
 
-                        System.out.println("Игра прекращена.");
+                        System.out.println("Game over.");
                         break;
 
                     } else if (players < 0) {
 
-                        System.out.println("Число игроков не может быть меньше 0");
+                        System.out.println("Number of player cant be less then  0");
 
                     } else {
 
-                        System.out.println("Слишком много игроков!");
+                        System.out.println("Too many players");
                     }
                 }
 
             } else {
-                System.out.println("Вы ввели не число, или Ваше число слишком большое!");
+                System.out.println("Its not number or its too big");
 
             }
         }
 
 
-        // часть 3 - инициализация колоды
+
         String[] deck = new String[n];
         for (int i = 0; i < rank.length; i++) {
             for (int j = 0; j < suits.length; j++) {
@@ -62,15 +61,14 @@ public class Main {
             }
         }
 
-        // часть 4 - перетасовка колоды
+
         for (int i = 0; i < n; i++) {
-            int r = i + (int) (Math.random() * (n - i)); // случайная карта в колоде
+            int r = i + (int) (Math.random() * (n - i));
             String temp = deck[r];
             deck[r] = deck[i];
             deck[i] = temp;
         }
 
-        // часть 5 - перетасованная колода выводится на экран
         for (int i = 0; i < players * cardsPerPlayer; i++) {
             System.out.println(deck[i]);
             if (i % cardsPerPlayer == cardsPerPlayer - 1)

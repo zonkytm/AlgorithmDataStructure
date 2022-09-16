@@ -2,7 +2,7 @@ package Circle;
 
 import java.util.Objects;
 
-public class Circle {
+public class Circle implements Comparable<Circle>{
     private double S;
     private double Length;
     private double radius;
@@ -47,5 +47,10 @@ public class Circle {
     @Override
     public int hashCode() {
         return Objects.hash(radius);
+    }
+
+    @Override
+    public int compareTo(Circle o) {
+        return Double.compare( o.radius,this.radius);
     }
 }

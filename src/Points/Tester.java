@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Tester {
 
     private int CirclesCount;
-    private ArrayList<Circle> circles;
+    private final ArrayList<Circle> circles;
     public Tester(){
         CirclesCount=0;
         circles=new ArrayList<Circle>();

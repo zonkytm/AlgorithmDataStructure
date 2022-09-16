@@ -2,7 +2,7 @@ package Books;
 
 public class Book implements Comparable<Book> {
     private String Name;
-    private int Date;
+    private  int Date;
     private String Author;
 
     Book(){
@@ -21,25 +21,18 @@ public class Book implements Comparable<Book> {
         return Name;
     }
 
-    public void setName(String name) {
-        Name = name;
-    }
+
 
     public int getDate() {
         return Date;
     }
 
-    public void setDate(int date) {
-        Date = date;
-    }
 
     public String getAuthor() {
         return Author;
     }
 
-    public void setAuthor(String author) {
-        Author = author;
-    }
+
 
     @Override
     public String toString() {
@@ -55,4 +48,6 @@ public class Book implements Comparable<Book> {
         return o.Date>=Date? -1:0;
     }
 
+    public void setName(Object o) {
+    }
 }

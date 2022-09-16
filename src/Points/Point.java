@@ -3,11 +3,10 @@ package Points;
 public class Point {
     private double x;
     private double y;
-    {
+
+    public Point(){
         x=0.0;
         y=0.0;
-    }
-    public Point(){
 
     }
     public Point(double x,double y){

@@ -27,8 +27,8 @@ public class BookShelf {
         return maxBook;
     }
     public Book getMinDateBook(){
-        Book minBook=new Book();
-        minBook.setDate(10000);
+        Book minBook=new Book(null,Integer.MAX_VALUE,null);
+
         for(int i=0;i<BookShelf.size();i++){
             if(minBook.getDate()>BookShelf.get(i).getDate()){
                 minBook=BookShelf.get(i);

@@ -14,6 +14,14 @@ public class Author {
         this.gender=gender;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
+
     public String getName() {
         return name;
     }
@@ -30,12 +38,7 @@ public class Author {
         this.email = email;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setGender(char gender) {
-        this.gender = gender;
-    }
+
 
     @Override
     public String toString() {
