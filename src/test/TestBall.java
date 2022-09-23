@@ -1,7 +1,7 @@
 package test;
 
 import Ball.Ball;
-import junit.framework.TestCase;
+
 import org.junit.jupiter.api.*;
 
 public class TestBall  {

@@ -2,24 +2,22 @@ package test;
 
 
 import Author.Author;
-import junit.framework.Assert;
-import junit.framework.TestCase;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
-public class TestAuthor extends TestCase {
+public class TestAuthor {
     private Author author;
 
     @BeforeEach
-    protected void setUp() throws Exception {
+    public void setUp()   {
         author=new Author();
         author.setEmail("_@gmail.com");
         author.setName("name");
         author.setGender('m');
-
     }
     @Test
     public void TestName() {
@@ -33,7 +31,7 @@ public class TestAuthor extends TestCase {
 
     @Test
     public void TestGender() {
-        Assert.assertEquals('m',author.getGender());
+        Assertions.assertEquals('m',author.getGender());
     }
     @Test
     public  void TestNameNotNull(){
